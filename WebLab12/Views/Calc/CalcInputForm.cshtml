@@ -1,0 +1,19 @@
+﻿@model CalcActionModel
+
+@{
+    string action = ViewContext.RouteData.Values["Action"].ToString();
+    ViewData["Title"] = action;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@using (Html.BeginForm(action, "Calc", FormMethod.Post))
+{
+    @Html.EditorFor(m => m.firstNum,"0")<br />
+    @Html.DropDownListFor(m => m.oper, new SelectList(new[] {"-","+","*","/"}))<br />    
+    @Html.EditorFor(m => m.secondNum, "0")<br />
+
+    <input type="submit" value="Submit" />
+}
+@{
+}

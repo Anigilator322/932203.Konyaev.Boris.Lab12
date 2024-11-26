@@ -1,0 +1,11 @@
+﻿﻿@{
+    ViewData["Title"] = "Form parametrs parsing demo";
+}
+
+<h2>@ViewData["Title"]</h2>
+<ul>
+    <li><a asp-area="" asp-controller="Calc" asp-action="Manual">Manual parsing in single action</a></li>
+    <li><a asp-area="" asp-controller="Calc" asp-action="ManualSeparate">Manual parsing in separate actions</a></li>
+    <li><a asp-area="" asp-controller="Calc" asp-action="ModelBinding">Model binding (parameters)</a></li>
+    <li><a asp-area="" asp-controller="Calc" asp-action="ModelBindingSeparate">Model binding (seperate models)</a></li>
+</ul>
